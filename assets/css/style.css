@@ -1,5 +1,5 @@
 :root {
-  --background: #263e62;
+  --background: #142949;
 }
 
 * {
@@ -48,4 +48,77 @@ body {
   background: linear-gradient(45deg, #f06, #3cf);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
+}
+
+.home {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 0 10%;
+  color: #d3ecdb;
+}
+
+.home-content h1 {
+  font-size: 56px;
+  font-weight: 800;
+}
+
+.home-content h3 {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.home-content {
+  font-size: 16px;
+}
+
+.btn {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 180px;
+  height: 48px;
+  border-radius: 40px;
+  font-size: 19px;
+  color: #fff;
+  text-decoration: 0;
+  font-weight: 600;
+  letter-spacing: 1px;
+  z-index: 1;
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  inset: 0;
+  background: linear-gradient(45deg, #f06, #3cf, #f06);
+  background-position: 0 0;
+  background-size: 200%;
+  z-index: -1;
+  border-radius: 40px;
+  transition: 0.5s ease;
+  filter: blur(3px);
+}
+
+.btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  inset: 0;
+  background: linear-gradient(45deg, #f06, #3cf, #f06);
+  background-position: 0 0;
+  background-size: 200%;
+  z-index: -1;
+  border-radius: 40px;
+
+  transition: 0.5s ease;
+}
+
+.btn:hover::after {
+  background-position: 100% 0;
 }
